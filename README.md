@@ -5,25 +5,40 @@
 
 
 
-### EDA
+# EDA
 
-1. Target(Y) split across Yes/No
+## 1. Target(Y) split across Yes/No
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/MicrosoftTeams-image1.png)
 
-2. Missing Values
+### We observe >35k "No" values and ~5K "Yes" values
+
+###
+
+## 2. Missing Values
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/EDA2.png)
 
-3. Coorelation Matrix 
+### 41188 Missing records found in Dataset. 
+
+###
+
+## 3. Coorelation Matrix 
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/EDA3.png)
 
-4. Summary/Frequency Distribution of predictors :
+```
+Inference - 
+
+emp_var_rate has high correlation with cons_price_idx(0.78), euribor3m(0.97), nr_employed(0.91)
+nr_employed has high correlation with euribor3m(0.95)
+cons_price_idx has high correlation with euribor3m(0.69)
+```
+
+
+## 4. Summary/Frequency Distribution of predictors :
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/EDA4.png)
-
-
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/EDA5.png)
 
@@ -46,35 +61,40 @@
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/EDA14.png)
 
 
-
-### K - means
-
-![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Mod_eval01.png)
-![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Mod_eval02.png)
 ###
 
+## K - means
+
+![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Mod_eval01.png)
+
+#### We have chosen ~3 number of clusters as the optimal, as illustrated by the graph above.
+
+![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Mod_eval02.png)
+
+#### The three clusters are coloured coded.
 
 
-##Model Evaluation 
 
-### Logisitic Regression
+# Model Evaluation 
+
+## Logisitic Regression
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Model_Eval1.png)
 
-### Decision Trees
+## Decision Trees
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Model_Eval2.png)
 
-### Random Forest
+## Random Forest
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Model_Eval3.png)
 
-###Gradient Boosted Trees
+## Gradient Boosted Trees
 
 ![alt text](https://github.com/kalpesh22-21/miniproject/blob/main/images/Model_Eval4.png)
 
 
-From all the 4 above models we see that the Gradient boosting model had the highest accuracy of 91.11% and precison of  50% in predicting "YES" class i.e. those who are likely to do a deposit.
+#### From all the 4 above models we see that the Gradient boosting model had the highest accuracy of 91.11% and precison of  50% in predicting "YES" class i.e. those who are likely to do a deposit.
 
 
 # Deploy
